@@ -57,7 +57,7 @@ function App() {
     }
 
     let displayedSayings = fictionalSayings.map(
-        (saying) => `<p>${saying.character_name}: ${saying.quote}</p>`,
+        (saying, index) => (<p key={index}><strong>{saying.character_name}:</strong> {saying.quote}</p>)
     );
 
     return (
